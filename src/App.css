@@ -4,7 +4,7 @@ html {
     width:100%;
     min-width: 850px;
     height: 100%;
-    background-color: #1b2f59;
+    background-color: #00698C;
 }
 
 body {
@@ -96,20 +96,20 @@ a:hover{
     height: 65px;
 }
 .navbar-header {
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     position: relative;
 }
 .navbar-header::after {
     left: 100%;
     width: 15%;
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     content: "";
     display: block;
     height: 100%;
     position: absolute;
 }
 .navbar-header::before, .navbar-header::before {
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     content: "";
     display: block;
     height: 100%;
@@ -155,7 +155,7 @@ a:hover{
     text-transform: capitalize;
     width: 158px;
     outline: none;
-    background-color: #1b2f59;
+    background-color: #00698C;
     color: #fff;
     font-weight: 500;
 }
@@ -166,7 +166,7 @@ a:hover{
  .safeTabsWrap .nav-pills > li.active > a:focus,
 .safeTabsWrap  .nav-pills > li.active > a:hover {
     background-color: #69FFBD;
-    color: #1b2f59;
+    color: #00698C;
 }
 
 .safeTabs > div {
@@ -183,16 +183,16 @@ a:hover{
     background-color: #fff;
     background-image: none;
     background-repeat: repeat-x;
-    border: 1px solid #1b2f59;
+    border: 1px solid #00698C;
     border-radius: 0;
-    color: #1b2f59;
+    color: #00698C;
     padding: 3px 10px;
     text-shadow: 0 0;
 }
 .btn-default:hover{
-    background-color: #1b2f59;
+    background-color: #00698C;
     color: #fff;
-    border-color: #1b2f59;
+    border-color: #00698C;
 }
 
 hr{
@@ -254,7 +254,7 @@ hr{
 /**--------------footer-css---------**/
 
 #footer{
-    background-color: #1b2f59;
+    background-color: #00698C;
     padding: 30px 0px;
 }
 #footer .footerSocialWrap{
@@ -337,7 +337,7 @@ hr{
         display: block;
         left: 33.5%;
         top: 47.5%;
-        color: #1b2f59;
+        color: #00698C;
         font-weight: 900;
         font-size: 0.66em;
     }
