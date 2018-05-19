@@ -148,6 +148,10 @@ class Single extends Component {
                             <b>A SafeCoin wallet</b> is as simple as a single pairing of a SafeCoin address with its corresponding SafeCoin private key. You can share your address to receive SAFE payments, however your private key is what allows you to unlock and manage your funds, keep it safe.
                         </p>
                         <p>
+                            <b>A T-Address</b> (also known as “transparent address”) is like a classical Bitcoin address and can be seen on the blockchain explorer. 
+                            <b>A Z-Address</b> is a private address using a zero-knowledge system to shield the balance and transactions in it from being seen.
+                        </p>
+                        <p>
                             <b>To safeguard this wallet</b> you must print or otherwise record the SafeCoin address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable. Your SafeCoin private key should be kept a secret. Whomever you share the private key with has access to spend all the SAFE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.
                         </p>
                         <p>
