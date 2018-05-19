@@ -16,7 +16,7 @@ body {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #ffffff;
+    color: #4C4C4C;
     overflow-x: hidden;
 }
 a{
@@ -165,7 +165,7 @@ a:hover{
 .safeTabsWrap .nav-pills > li.active > a,
  .safeTabsWrap .nav-pills > li.active > a:focus,
 .safeTabsWrap  .nav-pills > li.active > a:hover {
-    background-color: #69FFBD;
+    background-color: #FFFFFF;
     color: #00698C;
 }
 
