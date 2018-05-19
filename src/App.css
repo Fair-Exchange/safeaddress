@@ -70,14 +70,14 @@ a:hover{
     max-width: 100%;
 }
 
-.zenHeader .container-fluid{
+.safeHeader .container-fluid{
     padding: 0px 30px;
    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.zenHeader{
+.safeHeader{
     margin-bottom: 0px;
 }
-.zenHeader  .navbar-text{
+.safeHeader  .navbar-text{
     margin-left: 0px;
     margin-right: 0px;
     font-size: 13px;
@@ -85,14 +85,14 @@ a:hover{
  .headerLeftOption > a{
      color: red;
 }
-.zenHeader .nav li a{
+.safeHeader .nav li a{
     font-weight: 400;
     color: #1B2F59;
 }
-.zenHeader .nav li a:hover{
+.safeHeader .nav li a:hover{
     color: #1B2F59;
 }
-.zenHeader .navbar-brand{
+.safeHeader .navbar-brand{
     height: 65px;
 }
 .navbar-header {
@@ -118,36 +118,36 @@ a:hover{
     top: 0;
     width: 9999px;
 }
-.zenHeader .nav{
+.safeHeader .nav{
     padding: 6px 0px;
 }
 /*________________tab section css___________*/
 
-.zenTabsWrap{
+.safeTabsWrap{
     text-align: center;
     padding: 70px 0px;
 }
-.zenTabsWrap .nav-justified{
+.safeTabsWrap .nav-justified{
     display: inline-block;
     width: auto;
     padding-bottom: 10px;
 }
-.zenTabs {
+.safeTabs {
     text-align: left;
 }
-.zenTabs .r3{
+.safeTabs .r3{
     margin: 15px auto auto auto;
 }
-.zenTabs ul{
+.safeTabs ul{
     list-style-type: none;
     padding: 0;
     margin: 0px;
     margin-bottom: 10px;
 }
-.zenTabsWrap .nav-justified > li{
+.safeTabsWrap .nav-justified > li{
     width: auto;
 }
-.zenTabsWrap .nav-justified > li a{
+.safeTabsWrap .nav-justified > li a{
     border-radius: 0;
     font-size: 16px;
     padding: 12px 0;
@@ -159,21 +159,21 @@ a:hover{
     color: #fff;
     font-weight: 500;
 }
-.zenTabsWrap .nav-justified > li + li a{
+.safeTabsWrap .nav-justified > li + li a{
     margin-left: 3px;
 }
-.zenTabsWrap .nav-pills > li.active > a,
- .zenTabsWrap .nav-pills > li.active > a:focus,
-.zenTabsWrap  .nav-pills > li.active > a:hover {
+.safeTabsWrap .nav-pills > li.active > a,
+ .safeTabsWrap .nav-pills > li.active > a:focus,
+.safeTabsWrap  .nav-pills > li.active > a:hover {
     background-color: #69FFBD;
     color: #1b2f59;
 }
 
-.zenTabs > div {
+.safeTabs > div {
     padding-top: 20px;
 }
 
-.zenTabs {
+.safeTabs {
     box-shadow: 0px 0px 10px #CCC;
     background: #ededed;
     padding: 24px 20px 14px 20px;
@@ -219,7 +219,7 @@ hr{
 
 }
 
-.zentabcode{
+.safetabcode{
     max-width: 200px;
 }
 
@@ -308,7 +308,7 @@ hr{
     }
 
     #art-area {
-        background-image: url("zen_paper_front_sm.png");
+        background-image: url("safe_paper_front_sm.png");
         background-repeat: no-repeat;
         background-size: contain;
         width: 746px;
@@ -415,14 +415,14 @@ hr{
         margin: 0px auto 20px auto;
         text-align: center
     }
-    .zenTabsWrap{
+    .safeTabsWrap{
         padding: 0px;
     }
-    .zentabcode{
+    .safetabcode{
        margin: 0 auto;
     }
 
-    .zenTabs > div {
+    .safeTabs > div {
         padding-top: 0px;
     }
 

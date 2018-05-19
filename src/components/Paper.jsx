@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { QRCode }           from 'react-qr-svg';
-import zencashjs            from 'zencashjs';
+import safecoinjs            from 'safecoinjs';
 
-import art1 from '../zen_paper_front.png';
-import art2 from '../zen_paper_back.png';
+import art1 from '../safe_paper_front.png';
+import art2 from '../safe_paper_back.png';
 
 class Paper extends Component {
     constructor(props) {
@@ -18,11 +18,11 @@ class Paper extends Component {
     }
 
     genAddress() {
-        const priv      = zencashjs.address
+        const priv      = safecoinjs.address
             .mkPrivKey(this.props.entropy + new Date().getTime());
-        const privWIF   = zencashjs.address.privKeyToWIF(priv, true);
-        const pubKey    = zencashjs.address.privKeyToPubKey(priv, true);
-        const znAddr    = zencashjs.address.pubKeyToAddr(pubKey);
+        const privWIF   = safecoinjs.address.privKeyToWIF(priv, true);
+        const pubKey    = safecoinjs.address.privKeyToPubKey(priv, true);
+        const znAddr    = safecoinjs.address.pubKeyToAddr(pubKey);
 
         this.setState({
             priv: priv,
@@ -109,7 +109,7 @@ class Paper extends Component {
                 <Row className="r3">
                     <Col>
                         <p>
-                          A paper wallet is a piece of paper containing a public address and a private key. It allows you to store some ZENs offline.
+                          A paper wallet is a piece of paper containing a public address and a private key. It allows you to store some SAFEs offline.
                         </p>
                         <p>
                           These kind of wallets are vulnerable to loss and theft. You should keep it safe like jewels or cash. Therefore it is recommended either to have a backup or to generate it only for a temporary use.

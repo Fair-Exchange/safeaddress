@@ -2,7 +2,7 @@ import React, { Component }     from 'react';
 import { Row, Col, Button, FormGroup, ControlLabel, FormControl }
                                 from 'react-bootstrap';
 import { QRCode }               from 'react-qr-svg';
-import { address }              from 'zencashjs';
+import { address }              from 'safecoinjs';
 
 class Multisig extends Component {
     constructor(props) {
@@ -101,7 +101,7 @@ class Multisig extends Component {
                     <Row className="r2">
                         <Col md={4} className="max-width">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>Safe Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -111,7 +111,7 @@ class Multisig extends Component {
                                     value={this.state.addr}
                                 />
                             </div>
-                            <div className="zentabcode">
+                            <div className="safetabcode">
                                 {this.state.addr}
                             </div>
                         </Col>

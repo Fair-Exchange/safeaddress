@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Button, FormGroup, Radio, ControlLabel, FormControl }
                             from 'react-bootstrap';
 import { QRCode }           from 'react-qr-svg';
-import zencashjs            from 'zencashjs';
+import safecoinjs            from 'safecoinjs';
 
 
 class Details extends Component {
@@ -36,17 +36,17 @@ class Details extends Component {
             || this.state.input[0] === 'L'
             || this.state.input[0] === 'K') {
                 privWIF = this.state.input;
-                priv    = zencashjs.address.WIFToPrivKey(privWIF);
+                priv    = safecoinjs.address.WIFToPrivKey(privWIF);
             } else {
                 priv    = this.state.input;
-                privWIF = zencashjs.address.privKeyToWIF(priv, true);
+                privWIF = safecoinjs.address.privKeyToWIF(priv, true);
             }
         } catch(e) {
             return alert("Invalid Private Key");
         }
 
-        const pubKey    = zencashjs.address.privKeyToPubKey(priv, true);
-        const znAddr    = zencashjs.address.pubKeyToAddr(pubKey);
+        const pubKey    = safecoinjs.address.privKeyToPubKey(priv, true);
+        const znAddr    = safecoinjs.address.pubKeyToAddr(pubKey);
 
         this.setState({
             priv: priv,
@@ -66,17 +66,17 @@ class Details extends Component {
             if(!z_secretKey) throw(z_secretKey);
             if(z_secretKey[0] !== '0') throw(z_secretKey);
 
-            spendingKey = zencashjs.zaddress
+            spendingKey = safecoinjs.zaddress
                             .zSecretKeyToSpendingKey(z_secretKey);
-            a_pk        = zencashjs.zaddress
+            a_pk        = safecoinjs.zaddress
                             .zSecretKeyToPayingKey(z_secretKey);
-            pk_enc      = zencashjs.zaddress
+            pk_enc      = safecoinjs.zaddress
                             .zSecretKeyToTransmissionKey(z_secretKey);
         } catch(e) {
             return alert("Invalid Private Key");
         }
 
-        const Zaddress  = zencashjs.zaddress.mkZAddress(a_pk, pk_enc);
+        const Zaddress  = safecoinjs.zaddress.mkZAddress(a_pk, pk_enc);
 
         this.setState({
             priv: z_secretKey,
@@ -100,7 +100,7 @@ class Details extends Component {
     }
 
     getExplorerAddress() {
-        return("https://explorer.zensystem.io/address/" + this.state.addr);
+        return("https://explorer.safecoin.org/address/" + this.state.addr);
     }
 
     render() {
@@ -152,7 +152,7 @@ class Details extends Component {
                     <Row className="r2">
                         <Col md={6} className="max-width">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>Safe Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -204,16 +204,16 @@ class Details extends Component {
                             </p>
                         ) : this.state.addr && this.state.type === 'Z' ? (
                             <p>
-                                This is a Z-address (shielded address) meaning your balance is hidden. To check your balance import your Spending Key into the <a href='https://github.com/ZencashOfficial/zencash-swing-wallet-ui/releases'>Zencash Swing Wallet</a>
+                                This is a Z-address (shielded address) meaning your balance is hidden. To check your balance import your Spending Key into the <a href='https://github.com/Fair-Exchange/safewallet/releases'>SafeCoin GUI Wallet</a>
                             </p>
                         ) : (
                             <p></p>
                         )}
                         <p>
-                            Entering your private key here allows you to regenerate your Zen Address and print your wallet if you wish.
+                            Entering your private key here allows you to regenerate your Safe Address and print your wallet if you wish.
                         </p>
                         <p>
-                            <b>Warning: make sure you are on ZENPAPERWALLET.COM !</b>
+                            <b>Warning: make sure you are on paperwallet.safecoin.org !</b>
                         </p>
                         <p>
                             Your private key is a sensitive element. Whomever knows it can manage your funds. If you enter your private key into some website double-check the URL to avoid phishing attempts.

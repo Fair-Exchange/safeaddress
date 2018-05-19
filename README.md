@@ -1,2 +1,2 @@
-# zenpaperwallet.com
-JavaScript Client-Side Zencash Wallet Generator using [zencashjs library](https://github.com/ZencashOfficial/zencashjs) and inspired by [bitaddress.org](https://github.com/pointbiz/bitaddress.org)
+# paperwallet.safecoin.org
+JavaScript Client-Side SafeCoin Wallet Generator using [safecoinjs library](https://github.com/OleksandrBlack/safecoinjs) and inspired by [bitaddress.org](https://github.com/pointbiz/bitaddress.org)
