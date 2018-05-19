@@ -149,6 +149,8 @@ class Single extends Component {
                         </p>
                         <p>
                             <b>A T-Address</b> (also known as “transparent address”) is like a classical Bitcoin address and can be seen on the blockchain explorer. 
+                        </p>
+                        <p>
                             <b>A Z-Address</b> is a private address using a zero-knowledge system to shield the balance and transactions in it from being seen.
                         </p>
                         <p>
