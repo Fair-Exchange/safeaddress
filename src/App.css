@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: black url("bg.jpg") center center repeat;
+    background: black url("bg.png") center center repeat;
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
