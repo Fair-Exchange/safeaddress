@@ -32,9 +32,8 @@ class Details extends Component {
         try {
             if(!this.state.input) throw(this.state.input);
 
-            if(this.state.input[0] === '5'
-            || this.state.input[0] === 'L'
-            || this.state.input[0] === 'K') {
+            if(this.state.input[0] === 'U'
+            || this.state.input[0] === 'V') {
                 privWIF = this.state.input;
                 priv    = safecoinjs.address.WIFToPrivKey(privWIF);
             } else {
