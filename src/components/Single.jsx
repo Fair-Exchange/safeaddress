@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Button, FormGroup, Radio }
                             from 'react-bootstrap';
 import { QRCode }           from 'react-qr-svg';
-import zencashjs            from 'zencashjs';
+import safecoinjs            from 'safecoinjs';
 
 class Single extends Component {
     constructor(props) {
@@ -16,11 +16,11 @@ class Single extends Component {
     }
 
     genTAddress() {
-        const priv      = zencashjs.address
+        const priv      = safecoinjs.address
             .mkPrivKey(this.props.entropy + new Date().getTime());
-        const privWIF   = zencashjs.address.privKeyToWIF(priv, true);
-        const pubKey    = zencashjs.address.privKeyToPubKey(priv, true);
-        const znAddr    = zencashjs.address.pubKeyToAddr(pubKey);
+        const privWIF   = safecoinjs.address.privKeyToWIF(priv, true);
+        const pubKey    = safecoinjs.address.privKeyToPubKey(priv, true);
+        const znAddr    = safecoinjs.address.pubKeyToAddr(pubKey);
 
         this.setState({
             priv: priv,
@@ -30,15 +30,15 @@ class Single extends Component {
     }
 
     genZAddress() {
-        const z_secretKey   = zencashjs.zaddress
+        const z_secretKey   = safecoinjs.zaddress
             .mkZSecretKey(this.props.entropy + new Date().getTime());
-        const spendingKey   = zencashjs.zaddress
+        const spendingKey   = safecoinjs.zaddress
                                 .zSecretKeyToSpendingKey(z_secretKey);
-        const a_pk          = zencashjs.zaddress
+        const a_pk          = safecoinjs.zaddress
                                 .zSecretKeyToPayingKey(z_secretKey);
-        const pk_enc        = zencashjs.zaddress
+        const pk_enc        = safecoinjs.zaddress
                                 .zSecretKeyToTransmissionKey(z_secretKey);
-        const Zaddress      = zencashjs.zaddress.mkZAddress(a_pk, pk_enc);
+        const Zaddress      = safecoinjs.zaddress.mkZAddress(a_pk, pk_enc);
 
         this.setState({
             priv: z_secretKey,
@@ -102,7 +102,7 @@ class Single extends Component {
                     <Row className="r2">
                         <Col md={3} className="max-width singleTabs col-sm-offset-3">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>Safe Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -112,7 +112,7 @@ class Single extends Component {
                                     value={this.state.addr}
                                 />
                             </div>
-                            <div className="zentabcode">
+                            <div className="safetabcode">
                                 {this.state.addr}
                             </div>
                         </Col>
@@ -133,7 +133,7 @@ class Single extends Component {
                                         value={this.state.wif}
                                     />
                                 </div>
-                                <div className="zentabcode">{this.state.wif}</div>
+                                <div className="safetabcode">{this.state.wif}</div>
                             </div>
                             <p>{this.getZpriv()}</p>
                         </Col>
@@ -145,24 +145,28 @@ class Single extends Component {
                 <Row className="r3">
                     <Col>
                         <p>
-                            <b>A Zencash wallet</b> is as simple as a single pairing of a Zencash address with its corresponding Zencash private key. You can share your address to receive ZEN payments, however your private key is what allows you to unlock and manage your funds, keep it safe.
+                            <b>A SafeCoin wallet</b> is as simple as a single pairing of a SafeCoin address with its corresponding SafeCoin private key. You can share your address to receive SAFE payments, however your private key is what allows you to unlock and manage your funds, keep it safe.
                         </p>
                         <p>
-                            <b>To safeguard this wallet</b> you must print or otherwise record the Zencash address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable. Your Zencash private key should be kept a secret. Whomever you share the private key with has access to spend all the ZEN associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.
+                            <b>A T-Address</b> (also known as “transparent address”) is like a classical Bitcoin address and can be seen on the blockchain explorer. 
                         </p>
                         <p>
-                            <b>Add funds</b> to this wallet by instructing others to send ZEN to your Zen address.
+                            <b>A Z-Address</b> is a private address using a zero-knowledge system to shield the balance and transactions in it from being seen.
                         </p>
                         <p>
-                            <b>Check your balance</b> by entering your Zen address on one of these explorers :
+                            <b>To safeguard this wallet</b> you must print or otherwise record the SafeCoin address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable. Your SafeCoin private key should be kept a secret. Whomever you share the private key with has access to spend all the SAFE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.
+                        </p>
+                        <p>
+                            <b>Add funds</b> to this wallet by instructing others to send SAFE to your Safe address.
+                        </p>
+                        <p>
+                            <b>Check your balance</b> by entering your Safe address on one of these explorers :
                         </p>
                         <ul style={{listStyleType: 'none'}}>
-                            <li><a href="https://explorer.zensystem.io/">https://explorer.zensystem.io/</a></li>
-                            <li><a href="http://explorer.zenmine.pro/insight/">http://explorer.zenmine.pro/insight/</a></li>
-                            <li><a href="https://explorer.zen-solutions.io/">https://explorer.zen-solutions.io/</a></li>
+                            <li><a href="https://explorer.safecoin.org/">https://explorer.safecoin.org/</a></li>
                         </ul>
                         <p>
-                            <b>To spend your ZEN</b> you can download the <a href='https://github.com/ZencashOfficial/zencash-swing-wallet-ui/releases'>Zencash Swing Wallet</a> and import your private key to the p2p client wallet.
+                            <b>To spend your SAFE</b> you can download the <a href='https://github.com/OleksandrBlack/safecoin-swing-wallet-ui/releases'>SafeCoin Swing Wallet</a> and import your private key to the p2p client wallet.
                         </p>
                     </Col>
                 </Row>

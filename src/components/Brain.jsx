@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Button, FormGroup, ControlLabel, Radio, FormControl }
                             from 'react-bootstrap';
 import { QRCode }           from 'react-qr-svg';
-import zencashjs            from 'zencashjs';
+import safecoinjs            from 'safecoinjs';
 
 class Brain extends Component {
     constructor(props) {
@@ -30,13 +30,13 @@ class Brain extends Component {
         for(let i = 0 ; i < it ; i++) {
             if((i*100/it) % 10 === 0) console.log((i*100/it) + "%");
 
-            priv      = zencashjs.address.mkPrivKey(this.props.entropy + i);
+            priv      = safecoinjs.address.mkPrivKey(this.props.entropy + i);
 
-            pub    = zencashjs.address.privKeyToPubKey(priv);
-            addr    = zencashjs.address.pubKeyToAddr(pub);
+            pub    = safecoinjs.address.privKeyToPubKey(priv);
+            addr    = safecoinjs.address.pubKeyToAddr(pub);
 
-            c_pub    = zencashjs.address.privKeyToPubKey(priv, true);
-            c_addr    = zencashjs.address.pubKeyToAddr(c_pub);
+            c_pub    = safecoinjs.address.privKeyToPubKey(priv, true);
+            c_addr    = safecoinjs.address.pubKeyToAddr(c_pub);
 
             if (addr.search("zn" + word) !== -1
             ||  c_addr.search("zn" + word) !== -1) {
@@ -46,8 +46,8 @@ class Brain extends Component {
         }
         console.log("<------END");
 
-        wif     = zencashjs.address.privKeyToWIF(priv);
-        c_wif    = zencashjs.address.privKeyToWIF(priv, true);
+        wif     = safecoinjs.address.privKeyToWIF(priv);
+        c_wif    = safecoinjs.address.privKeyToWIF(priv, true);
         this.setState({
             priv: priv,
             wif: wif,
@@ -69,10 +69,10 @@ class Brain extends Component {
             if(Number.isInteger(it)) return this.vanity(words[1], it);
         }
 
-        const priv      = zencashjs.address.mkPrivKey(this.state.passphrase);
-        const privWIF   = zencashjs.address.privKeyToWIF(priv, true);
-        const pubKey    = zencashjs.address.privKeyToPubKey(priv, true);
-        const znAddr    = zencashjs.address.pubKeyToAddr(pubKey);
+        const priv      = safecoinjs.address.mkPrivKey(this.state.passphrase);
+        const privWIF   = safecoinjs.address.privKeyToWIF(priv, true);
+        const pubKey    = safecoinjs.address.privKeyToPubKey(priv, true);
+        const znAddr    = safecoinjs.address.pubKeyToAddr(pubKey);
 
         this.setState({
             priv: priv,
@@ -84,15 +84,15 @@ class Brain extends Component {
     genZAddress() {
         if(!this.state.passphrase) return;
 
-        const z_secretKey   = zencashjs.zaddress
+        const z_secretKey   = safecoinjs.zaddress
                                 .mkZSecretKey(this.state.passphrase);
-        const spendingKey   = zencashjs.zaddress
+        const spendingKey   = safecoinjs.zaddress
                                 .zSecretKeyToSpendingKey(z_secretKey);
-        const a_pk          = zencashjs.zaddress
+        const a_pk          = safecoinjs.zaddress
                                 .zSecretKeyToPayingKey(z_secretKey);
-        const pk_enc        = zencashjs.zaddress
+        const pk_enc        = safecoinjs.zaddress
                                 .zSecretKeyToTransmissionKey(z_secretKey);
-        const Zaddress      = zencashjs.zaddress.mkZAddress(a_pk, pk_enc);
+        const Zaddress      = safecoinjs.zaddress.mkZAddress(a_pk, pk_enc);
 
         this.setState({
             priv: z_secretKey,
@@ -164,7 +164,7 @@ class Brain extends Component {
                     <Row className="r2">
                         <Col md={3} className="max-width col-sm-offset-3">
                             <h1 style={{color:'green'}}>Public</h1>
-                            <h3>Zen Address</h3>
+                            <h3>Safe Address</h3>
                             <div>
                                 <QRCode
                                     bgColor="#FFFFFF"
@@ -174,7 +174,7 @@ class Brain extends Component {
                                     value={this.state.addr}
                                 />
                             </div>
-                            <div className="zentabcode">
+                            <div className="safetabcode">
                                 {this.state.addr}
                             </div>
                         </Col>
@@ -195,7 +195,7 @@ class Brain extends Component {
                                         value={this.state.wif}
                                     />
                                 </div>
-                                <div className="zentabcode">{this.state.wif}</div>
+                                <div className="safetabcode">{this.state.wif}</div>
                             </div>
                             <p>{this.getZpriv()}</p>
                         </Col>
@@ -210,7 +210,7 @@ class Brain extends Component {
                             A brain wallet is generated from a secret passphrase you can choose, usually a long sequence of random words or a long sentence. The purpose of a brain wallet is to be able to only remember your passphrase with no need to write it down. At anytime, anywhere, you can regenerate your wallet here with your passphrase.
                         </p>
                         <p>
-                            <b>Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your ZENs.</b>
+                            <b>Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your SAFEs.</b>
                         </p>
                     </Col>
                 </Row>

@@ -22,57 +22,32 @@ export default class Footer extends Component {
                     <Col md={12} className="footerSocialWrap">
                         <ul className="footerSocial">
                             <li>
-                                <a href="https://zensystem.io">
+                                <a href="https://safecoin.org">
                                     <img src={website} alt="website"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://blog.zensystem.io/">
-                                    <img src={blogger} alt="blogger"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://forum.zensystem.io/">
-                                    <img src={forum} alt="forum"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/ZencashOfficial">
+                                <a href="https://github.com/Fair-Exchange">
                                     <img src={github} alt="github"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/zencash/">
-                                    <img src={facebook} alt="facebook"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/zencashofficial">
+                                <a href="https://twitter.com/safecoins">
                                     <img src={twitter} alt="twitter"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/zencash">
-                                   <img src={telegram} alt="telegram"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://discordapp.com/invite/9kXQFHx">
+                                <a href="https://discord.gg/wvteEF3">
                                     <img src={discord} alt="discord"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://bitcointalk.org/index.php?topic=2047435.0">
+                                <a href="https://bitcointalk.org/index.php?topic=2838370">
                                     <img src={bitcointalk} alt="bitcointalk"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UCQ0v_lUnZHIKUQUXJzfgqOg">
-                                    <img src={youtube} alt="youtube"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.reddit.com/r/ZenSys/">
+                                <a href="https://www.reddit.com/r/SafeCoins/">
                                     <img src={reddit} alt="reddit"/>
                                 </a>
                             </li>
@@ -81,8 +56,12 @@ export default class Footer extends Component {
                     <Col md={12}>
                         <p className="footerCopyright">
                             If you have any question or suggestion, email me
-                            <a href="https://gmail.com/Gniar@protonmail.com">Gniar@protonmail.com</a> or find me on slack/discord/telegram
-                             <a href="https://twitter.com/@ Gniar.">@Gniar</a>.
+                            <a href="https://gmail.com/fair-exchange@protonmail.com">fair-exchange@protonmail.com</a> or find me on slack/discord/telegram
+                             <a href="https://twitter.com/@SafeCoins">@SafeCoins</a>.
+                        </p>
+                        <p className="footerCopyright">
+                            Express your gratitude for the wallet!
+							<a href="https://safe.lucky-mining.com.ua/">Go to the Lucky-Mining pool.</a>
                         </p>
                     </Col>
                 </Row>

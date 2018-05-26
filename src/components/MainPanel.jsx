@@ -77,13 +77,13 @@ export default class MainPanel extends Component {
             <Tabs id="nav" bsStyle="pills" justified
                 activeKey={this.state.activeNavTab}
                 onSelect={this.selectTab.bind(this)}
-                className = "zenTabsWrap"
+                className = "safeTabsWrap"
             >
                 {this.getCategories().map((category) => (
                     <Tab key={category.id}
                         eventKey={category.id}
                         title={category.title}
-                        className="zenTabs clearfix"
+                        className="safeTabs clearfix"
                     >
                         {this.tabContent(category.id)}
                     </Tab>

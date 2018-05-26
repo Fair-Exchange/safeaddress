@@ -4,11 +4,11 @@ html {
     width:100%;
     min-width: 850px;
     height: 100%;
-    background-color: #1b2f59;
+    background-color: #00698C;
 }
 
 body {
-    background: black url("bg.jpg") center center repeat;
+    background: black url("bg.png") center center repeat;
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
@@ -17,7 +17,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #4C4C4C;
-    overflow-x: hidden;
 }
 a{
     color: #1B2F59;
@@ -36,8 +35,8 @@ a:hover{
     display: -ms-flexbox;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
 }
 #header {
     font-weight: bold;
@@ -70,14 +69,15 @@ a:hover{
     max-width: 100%;
 }
 
-.zenHeader .container-fluid{
-    padding: 0px 30px;
+.safeHeader .container-fluid{
+   padding: 0px 63px;
    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.zenHeader{
+.safeHeader{
     margin-bottom: 0px;
+    width: 100%;
 }
-.zenHeader  .navbar-text{
+.safeHeader .navbar-text{
     margin-left: 0px;
     margin-right: 0px;
     font-size: 13px;
@@ -85,31 +85,36 @@ a:hover{
  .headerLeftOption > a{
      color: red;
 }
-.zenHeader .nav li a{
+/*<Navbar.Text>|</Navbar.Text>*/
+
+.safeHeader .nav li {
+  display: inline-block !important;
+}
+.safeHeader .nav li a{
     font-weight: 400;
     color: #1B2F59;
 }
-.zenHeader .nav li a:hover{
+.safeHeader .nav li a:hover{
     color: #1B2F59;
 }
-.zenHeader .navbar-brand{
+.safeHeader .navbar-brand{
     height: 65px;
 }
 .navbar-header {
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     position: relative;
 }
 .navbar-header::after {
     left: 100%;
     width: 15%;
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     content: "";
     display: block;
     height: 100%;
     position: absolute;
 }
 .navbar-header::before, .navbar-header::before {
-    /*background: #69ffbd none repeat scroll 0 0;*/
+    /*background: #000000 none repeat scroll 0 0;*/
     content: "";
     display: block;
     height: 100%;
@@ -118,62 +123,71 @@ a:hover{
     top: 0;
     width: 9999px;
 }
-.zenHeader .nav{
+.safeHeader .nav{
     padding: 6px 0px;
 }
 /*________________tab section css___________*/
 
-.zenTabsWrap{
+.safeTabsWrap{
     text-align: center;
     padding: 70px 0px;
 }
-.zenTabsWrap .nav-justified{
+.safeTabsWrap > ul > li{
     display: inline-block;
+    float: none;
     width: auto;
     padding-bottom: 10px;
 }
-.zenTabs {
+.safeTabsWrap > ul > li > a:hover {
+  color: #813100;
+}
+.safeTabs {
     text-align: left;
 }
-.zenTabs .r3{
+.safeTabs .r3{
     margin: 15px auto auto auto;
 }
-.zenTabs ul{
+.safeTabs ul{
     list-style-type: none;
     padding: 0;
     margin: 0px;
     margin-bottom: 10px;
 }
-.zenTabsWrap .nav-justified > li{
+.safeTabsWrap > ul > li{
     width: auto;
 }
-.zenTabsWrap .nav-justified > li a{
+.safeTabsWrap > ul > li a{
     border-radius: 0;
     font-size: 16px;
     padding: 12px 0;
     text-align: center;
     text-transform: capitalize;
-    width: 158px;
+    width: 118px;
     outline: none;
-    background-color: #1b2f59;
+    background-color: #00698C;
     color: #fff;
     font-weight: 500;
 }
-.zenTabsWrap .nav-justified > li + li a{
-    margin-left: 3px;
-}
-.zenTabsWrap .nav-pills > li.active > a,
- .zenTabsWrap .nav-pills > li.active > a:focus,
-.zenTabsWrap  .nav-pills > li.active > a:hover {
-    background-color: #69FFBD;
-    color: #1b2f59;
+.safeTabsWrap .nav-justified > li + li a{
+    margin-left: 0px;
 }
 
-.zenTabs > div {
+.safeTabsWrap .nav-pills > li.active > a,
+.safeTabsWrap .nav-pills > li.active > a:focus,
+.safeTabsWrap .nav-pills > li.active > a:hover {
+    background-color: #FFFFFF;
+    color: #00698C;
+}
+
+.safeTabsWrap .nav-pills>li+li {
+    /*margin-left: 0px !important;*/
+}
+
+.safeTabs > div {
     padding-top: 20px;
 }
 
-.zenTabs {
+.safeTabs {
     box-shadow: 0px 0px 10px #CCC;
     background: #ededed;
     padding: 24px 20px 14px 20px;
@@ -183,16 +197,16 @@ a:hover{
     background-color: #fff;
     background-image: none;
     background-repeat: repeat-x;
-    border: 1px solid #1b2f59;
+    border: 1px solid #00698C;
     border-radius: 0;
-    color: #1b2f59;
+    color: #00698C;
     padding: 3px 10px;
     text-shadow: 0 0;
 }
 .btn-default:hover{
-    background-color: #1b2f59;
+    background-color: #00698C;
     color: #fff;
-    border-color: #1b2f59;
+    border-color: #00698C;
 }
 
 hr{
@@ -219,7 +233,7 @@ hr{
 
 }
 
-.zentabcode{
+.safetabcode{
     max-width: 200px;
 }
 
@@ -254,8 +268,8 @@ hr{
 /**--------------footer-css---------**/
 
 #footer{
-    background-color: #1b2f59;
-    padding: 30px 0px;
+    background-color: #00698C;
+    padding: 63px 0px;
 }
 #footer .footerSocialWrap{
     text-align: center;
@@ -308,7 +322,7 @@ hr{
     }
 
     #art-area {
-        background-image: url("zen_paper_front_sm.png");
+        background-image: url("safe_paper_front_sm.png");
         background-repeat: no-repeat;
         background-size: contain;
         width: 746px;
@@ -337,7 +351,7 @@ hr{
         display: block;
         left: 33.5%;
         top: 47.5%;
-        color: #1b2f59;
+        color: #00698C;
         font-weight: 900;
         font-size: 0.66em;
     }
@@ -415,14 +429,14 @@ hr{
         margin: 0px auto 20px auto;
         text-align: center
     }
-    .zenTabsWrap{
+    .safeTabsWrap{
         padding: 0px;
     }
-    .zentabcode{
+    .safetabcode{
        margin: 0 auto;
     }
 
-    .zenTabs > div {
+    .safeTabs > div {
         padding-top: 0px;
     }
 
@@ -464,7 +478,7 @@ hr{
         position: relative;
         display: block;
         left: 33%;
-        top: 21%;
+        top: 22.2%;
     }
     #art-area>#addr-QR>svg {
         width: 12vw !important;
@@ -474,8 +488,8 @@ hr{
     #art-area>#wif-QR {
         position: relative;
         display: block;
-        left: -36.5%;
-        top: 11%;
+        left: -36.1%;
+        top: 13.5%;
     }
     #art-area>#wif-QR>svg {
         width: 11vw !important;
@@ -485,16 +499,16 @@ hr{
     #art-area>#addr-str1 {
         position: relative;
         display: block;
-        left: 28.65%;
-        top: 24.3%;
-        font-size: 1.1vw;
+        left: 29.65%;
+        top: 26.1%;
+        font-size: 1.5vw;
     }
     #art-area>#addr-str2 {
         position: relative;
         display: block;
-        left: 28.65%;
-        top: 7%;
-        font-size: 1.1vw;
+        left: 29.65%;
+        top: 8.7%;
+        font-size: 1.5vw;
         -webkit-transform: rotate(-180deg) !important;
         -moz-transform: rotate(-180deg) !important;
         -o-transform: rotate(-180deg) !important;
@@ -506,15 +520,15 @@ hr{
         position: relative;
         display: block;
         left: -27.1%;
-        top: 12.55%;
-        font-size: 0.76vw;
+        top: 16.10%;
+        font-size: 1.0vw;
     }
     #art-area>#wif-str2 {
         position: relative;
         display: block;
         left: -27.1%;
-        top: 0%;
-        font-size: 0.76vw;
+        top: 3.3%;
+        font-size: 1.0vw;
         -webkit-transform: rotate(-180deg) !important;
         -moz-transform: rotate(-180deg) !important;
         -o-transform: rotate(-180deg) !important;
@@ -522,32 +536,13 @@ hr{
         transform: rotate(-180deg) !important;
     }
 
-    #art-area>#wif-str1 {
-        position: relative;
-        display: block;
-        left: -27.1%;
-        top: 12.55%;
-        font-size: 0.76vw;
-    }
-    #art-area>#wif-str2 {
-        position: relative;
-        display: block;
-        left: -27.1%;
-        top: 0%;
-        font-size: 0.76vw;
-        -webkit-transform: rotate(-180deg) !important;
-        -moz-transform: rotate(-180deg) !important;
-        -o-transform: rotate(-180deg) !important;
-        -ms-transform: rotate(-180deg) !important;
-        transform: rotate(-180deg) !important;
-    }
 
     @-moz-document url-prefix() {
         #art-area>#addr-QR {
             position: relative;
             display: block;
-            left: 31%;
-            top: 42%;
+            left: 33%;
+            top: 44.2%;
         }
         #art-area>#addr-QR>svg {
             width: 12vw !important;
@@ -557,8 +552,8 @@ hr{
         #art-area>#wif-QR {
             position: relative;
             display: block;
-            left: -36.5%;
-            top: 21.5%;
+            left: -36.1%;
+            top: 26.8%;
         }
         #art-area>#wif-QR>svg {
             width: 11vw !important;
@@ -568,16 +563,16 @@ hr{
         #art-area>#addr-str1 {
             position: relative;
             display: block;
-            left: 28%;
-            top: 48.4%;
-            font-size: 1.1vw;
+            left: 30.0%;
+            top: 52.0%;
+            font-size: 1.5vw;
         }
         #art-area>#addr-str2 {
             position: relative;
             display: block;
-            left: 28%;
-            top: 13.5%;
-            font-size: 1.1vw;
+            left: 30.0%;
+            top: 17.5%;
+            font-size: 1.5vw;
             -webkit-transform: rotate(-180deg) !important;
             -moz-transform: rotate(-180deg) !important;
             -o-transform: rotate(-180deg) !important;
@@ -588,16 +583,16 @@ hr{
         #art-area>#wif-str1 {
             position: relative;
             display: block;
-            left: -27.25%;
-            top: 24.22%;
-            font-size: 0.77vw;
+            left: -27.40%;
+            top: 32.28%;
+            font-size: 1.1vw;
         }
         #art-area>#wif-str2 {
             position: relative;
             display: block;
             left: -27.25%;
-            top: -1%;
-            font-size: 0.77vw;
+            top: 6%;
+            font-size: 1.1vw;
             -webkit-transform: rotate(-180deg) !important;
             -moz-transform: rotate(-180deg) !important;
             -o-transform: rotate(-180deg) !important;

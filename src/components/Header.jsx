@@ -8,7 +8,7 @@ export default class Header extends Component {
     render() {
         return (
 
-            <Navbar id="header" className="zenHeader" fluid={true}>
+            <Navbar id="header" className="safeHeader" fluid={true}>
                 <div className="container">
                     <Navbar.Header>
                         <Navbar.Brand>
@@ -16,11 +16,9 @@ export default class Header extends Component {
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav pullRight>
-                        <NavItem href="https://myzenwallet.io/" className="headerLeftOption">WEB WALLET</NavItem>
+                        <NavItem href="https://wallet.safecoin.org/" className="headerLeftOption">WEB WALLET</NavItem>
                         <Navbar.Text>|</Navbar.Text>
-                        <NavItem href="http://getzen.cash/" className="headerLeftOption">FAUCET</NavItem>
-                        <Navbar.Text>|</Navbar.Text>
-                        <NavItem href="https://support.zencash.com/" className="headerLeftOption">SUPPORT</NavItem>
+						<NavItem href="https://explorer.safecoin.org/" className="headerLeftOption">EXPLORER</NavItem>
                     </Nav>
                 </div>
             </Navbar>
