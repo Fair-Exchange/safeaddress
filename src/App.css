@@ -464,7 +464,7 @@ hr{
         position: relative;
         display: block;
         left: 33%;
-        top: 22.2%;
+        top: 21%;
     }
     #art-area>#addr-QR>svg {
         width: 12vw !important;
@@ -474,8 +474,8 @@ hr{
     #art-area>#wif-QR {
         position: relative;
         display: block;
-        left: -36.1%;
-        top: 13.5%;
+        left: -36.5%;
+        top: 11%;
     }
     #art-area>#wif-QR>svg {
         width: 11vw !important;
@@ -522,13 +522,32 @@ hr{
         transform: rotate(-180deg) !important;
     }
 
+    #art-area>#wif-str1 {
+        position: relative;
+        display: block;
+        left: -27.1%;
+        top: 12.55%;
+        font-size: 0.76vw;
+    }
+    #art-area>#wif-str2 {
+        position: relative;
+        display: block;
+        left: -27.1%;
+        top: 0%;
+        font-size: 0.76vw;
+        -webkit-transform: rotate(-180deg) !important;
+        -moz-transform: rotate(-180deg) !important;
+        -o-transform: rotate(-180deg) !important;
+        -ms-transform: rotate(-180deg) !important;
+        transform: rotate(-180deg) !important;
+    }
 
     @-moz-document url-prefix() {
         #art-area>#addr-QR {
             position: relative;
             display: block;
-            left: 33%;
-            top: 44.2%;
+            left: 31%;
+            top: 42%;
         }
         #art-area>#addr-QR>svg {
             width: 12vw !important;
@@ -538,8 +557,8 @@ hr{
         #art-area>#wif-QR {
             position: relative;
             display: block;
-            left: -36.1%;
-            top: 26.8%;
+            left: -36.5%;
+            top: 21.5%;
         }
         #art-area>#wif-QR>svg {
             width: 11vw !important;
