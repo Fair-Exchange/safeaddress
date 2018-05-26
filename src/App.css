@@ -17,7 +17,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #4C4C4C;
-    overflow-x: hidden;
 }
 a{
     color: #1B2F59;
@@ -36,8 +35,8 @@ a:hover{
     display: -ms-flexbox;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
 }
 #header {
     font-weight: bold;
@@ -71,19 +70,25 @@ a:hover{
 }
 
 .safeHeader .container-fluid{
-    padding: 0px 30px;
+   padding: 0px 63px;
    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .safeHeader{
     margin-bottom: 0px;
+    width: 100%;
 }
-.safeHeader  .navbar-text{
+.safeHeader .navbar-text{
     margin-left: 0px;
     margin-right: 0px;
     font-size: 13px;
 }
  .headerLeftOption > a{
      color: red;
+}
+/*<Navbar.Text>|</Navbar.Text>*/
+
+.safeHeader .nav li {
+  display: inline-block !important;
 }
 .safeHeader .nav li a{
     font-weight: 400;
@@ -127,10 +132,14 @@ a:hover{
     text-align: center;
     padding: 70px 0px;
 }
-.safeTabsWrap .nav-justified{
+.safeTabsWrap > ul > li{
     display: inline-block;
+    float: none;
     width: auto;
     padding-bottom: 10px;
+}
+.safeTabsWrap > ul > li > a:hover {
+  color: #813100;
 }
 .safeTabs {
     text-align: left;
@@ -144,29 +153,34 @@ a:hover{
     margin: 0px;
     margin-bottom: 10px;
 }
-.safeTabsWrap .nav-justified > li{
+.safeTabsWrap > ul > li{
     width: auto;
 }
-.safeTabsWrap .nav-justified > li a{
+.safeTabsWrap > ul > li a{
     border-radius: 0;
     font-size: 16px;
     padding: 12px 0;
     text-align: center;
     text-transform: capitalize;
-    width: 158px;
+    width: 118px;
     outline: none;
     background-color: #00698C;
     color: #fff;
     font-weight: 500;
 }
 .safeTabsWrap .nav-justified > li + li a{
-    margin-left: 3px;
+    margin-left: 0px;
 }
+
 .safeTabsWrap .nav-pills > li.active > a,
- .safeTabsWrap .nav-pills > li.active > a:focus,
-.safeTabsWrap  .nav-pills > li.active > a:hover {
+.safeTabsWrap .nav-pills > li.active > a:focus,
+.safeTabsWrap .nav-pills > li.active > a:hover {
     background-color: #FFFFFF;
     color: #00698C;
+}
+
+.safeTabsWrap .nav-pills>li+li {
+    /*margin-left: 0px !important;*/
 }
 
 .safeTabs > div {
@@ -255,7 +269,7 @@ hr{
 
 #footer{
     background-color: #00698C;
-    padding: 30px 0px;
+    padding: 63px 0px;
 }
 #footer .footerSocialWrap{
     text-align: center;
@@ -464,7 +478,7 @@ hr{
         position: relative;
         display: block;
         left: 33%;
-        top: 21%;
+        top: 22.2%;
     }
     #art-area>#addr-QR>svg {
         width: 12vw !important;
@@ -474,8 +488,8 @@ hr{
     #art-area>#wif-QR {
         position: relative;
         display: block;
-        left: -36.5%;
-        top: 11%;
+        left: -36.1%;
+        top: 13.5%;
     }
     #art-area>#wif-QR>svg {
         width: 11vw !important;
@@ -492,9 +506,9 @@ hr{
     #art-area>#addr-str2 {
         position: relative;
         display: block;
-        left: 28.65%;
-        top: 7%;
-        font-size: 1.1vw;
+        left: 29.65%;
+        top: 8.7%;
+        font-size: 1.5vw;
         -webkit-transform: rotate(-180deg) !important;
         -moz-transform: rotate(-180deg) !important;
         -o-transform: rotate(-180deg) !important;
@@ -513,8 +527,8 @@ hr{
         position: relative;
         display: block;
         left: -27.1%;
-        top: 0%;
-        font-size: 0.76vw;
+        top: 3.3%;
+        font-size: 1.0vw;
         -webkit-transform: rotate(-180deg) !important;
         -moz-transform: rotate(-180deg) !important;
         -o-transform: rotate(-180deg) !important;
@@ -522,32 +536,13 @@ hr{
         transform: rotate(-180deg) !important;
     }
 
-    #art-area>#wif-str1 {
-        position: relative;
-        display: block;
-        left: -27.1%;
-        top: 12.55%;
-        font-size: 0.76vw;
-    }
-    #art-area>#wif-str2 {
-        position: relative;
-        display: block;
-        left: -27.1%;
-        top: 0%;
-        font-size: 0.76vw;
-        -webkit-transform: rotate(-180deg) !important;
-        -moz-transform: rotate(-180deg) !important;
-        -o-transform: rotate(-180deg) !important;
-        -ms-transform: rotate(-180deg) !important;
-        transform: rotate(-180deg) !important;
-    }
 
     @-moz-document url-prefix() {
         #art-area>#addr-QR {
             position: relative;
             display: block;
-            left: 31%;
-            top: 42%;
+            left: 33%;
+            top: 44.2%;
         }
         #art-area>#addr-QR>svg {
             width: 12vw !important;
@@ -557,8 +552,8 @@ hr{
         #art-area>#wif-QR {
             position: relative;
             display: block;
-            left: -36.5%;
-            top: 21.5%;
+            left: -36.1%;
+            top: 26.8%;
         }
         #art-area>#wif-QR>svg {
             width: 11vw !important;
@@ -575,9 +570,9 @@ hr{
         #art-area>#addr-str2 {
             position: relative;
             display: block;
-            left: 28%;
-            top: 13.5%;
-            font-size: 1.1vw;
+            left: 30.0%;
+            top: 17.5%;
+            font-size: 1.5vw;
             -webkit-transform: rotate(-180deg) !important;
             -moz-transform: rotate(-180deg) !important;
             -o-transform: rotate(-180deg) !important;
@@ -596,8 +591,8 @@ hr{
             position: relative;
             display: block;
             left: -27.25%;
-            top: -1%;
-            font-size: 0.77vw;
+            top: 6%;
+            font-size: 1.1vw;
             -webkit-transform: rotate(-180deg) !important;
             -moz-transform: rotate(-180deg) !important;
             -o-transform: rotate(-180deg) !important;
