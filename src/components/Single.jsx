@@ -166,7 +166,7 @@ class Single extends Component {
                             <li><a href="https://explorer.safecoin.org/">https://explorer.safecoin.org/</a></li>
                         </ul>
                         <p>
-                            <b>To spend your SAFE</b> you can download the <a href='https://github.com/OleksandrBlack/safecoin-swing-wallet-ui/releases'>SafeCoin Swing Wallet</a> and import your private key to the p2p client wallet.
+                            <b>To spend your SAFE</b> you can download the <a href='https://github.com/Fair-Exchange/safewallet/releases/'>SafeCoin Agama Wallet</a> and import your private key to the p2p client wallet.
                         </p>
                     </Col>
                 </Row>
