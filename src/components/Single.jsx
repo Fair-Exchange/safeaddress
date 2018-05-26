@@ -97,7 +97,7 @@ class Single extends Component {
                         </Button>
                     </Col>
                 </Row>
-
+                <hr />
                 {this.state.addr ? (
                     <Row className="r2">
                         <Col md={3} className="max-width singleTabs col-sm-offset-3">
@@ -135,7 +135,7 @@ class Single extends Component {
                                 </div>
                                 <div className="safetabcode">{this.state.wif}</div>
                             </div>
-                            <div>{this.getZpriv()}</div>
+                            <p>{this.getZpriv()}</p>
                         </Col>
                     </Row>
                 ) : (
@@ -144,7 +144,6 @@ class Single extends Component {
                 <hr />
                 <Row className="r3">
                     <Col>
-					<div>
                         <p>
                             <b>A SafeCoin wallet</b> is as simple as a single pairing of a SafeCoin address with its corresponding SafeCoin private key. You can share your address to receive SAFE payments, however your private key is what allows you to unlock and manage your funds, keep it safe.
                         </p>
@@ -169,7 +168,6 @@ class Single extends Component {
                         <p>
                             <b>To spend your SAFE</b> you can download the <a href='https://github.com/OleksandrBlack/safecoin-swing-wallet-ui/releases'>SafeCoin Swing Wallet</a> and import your private key to the p2p client wallet.
                         </p>
-						</div>
                     </Col>
                 </Row>
             </Col>
