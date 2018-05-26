@@ -57,7 +57,9 @@ export default class Footer extends Component {
                         <p className="footerCopyright">
                             If you have any question or suggestion, email me
                             <a href="https://gmail.com/fair-exchange@protonmail.com">fair-exchange@protonmail.com</a> or find me on slack/discord/telegram
-                             <a href="https://twitter.com/@ fair-exchange.">@fair-exchange</a>.
+                             <a href="https://twitter.com/@SafeCoins">@SafeCoins</a>.
+							 <br>
+							Express your gratitude for the wallet! <a href="https://safe.lucky-mining.com.ua/">Go to the Lucky-Mining pool.</a>
                         </p>
                     </Col>
                 </Row>

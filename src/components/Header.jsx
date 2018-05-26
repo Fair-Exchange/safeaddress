@@ -18,6 +18,7 @@ export default class Header extends Component {
                     <Nav pullRight>
                         <NavItem href="https://wallet.safecoin.org/" className="headerLeftOption">WEB WALLET</NavItem>
                         <Navbar.Text>|</Navbar.Text>
+						<NavItem href="https://explorer.safecoin.org/" className="headerLeftOption">EXPLORER</NavItem>
                     </Nav>
                 </div>
             </Navbar>
