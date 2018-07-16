@@ -5,5 +5,5 @@ JavaScript Client-Side SafeCoin Wallet Generator using [safecoinjs library](http
 yarn --ignore-engines install
 npm run build
 
-yarn global add serve
+yarn  --ignore-engines global add serve
   serve -s build
